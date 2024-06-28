@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const hbs = require('hbs');
 const path = require('path');
-const port = process.env.PORT || 80;
+// const port = process.env.PORT || 80;
 
 const staticPath = path.join(__dirname, "../public");
 
@@ -33,7 +33,8 @@ app.get("*", (req, res) => {
     });
 })
 
+module.exports = app;
 
-app.listen(port, () => {
-    console.log("listening...")
-})
+// app.listen(port, () => {
+//     console.log("listening...")
+// })
